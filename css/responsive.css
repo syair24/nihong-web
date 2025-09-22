@@ -1,0 +1,352 @@
+@media (max-width: 1024px) {
+  /* ================ navigasi ================*/
+  .nav-container {
+    padding: 10px 20px;
+  }
+
+  .nav-container .nav-title img {
+    height: 40px;
+  }
+
+  .nav-container .nav-title h2 {
+    font-size: 1.2rem;
+  }
+
+  .nav-container .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .nav-container .hamburger span {
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary-black);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-container .hamburger span:nth-child(2) {
+    width: 60%;
+  }
+
+  .nav-container .hamburger span:nth-child(3) {
+    width: 80%;
+  }
+
+  .nav-container nav {
+    position: absolute;
+    background-color: var(--primary-white);
+    box-shadow: 0 10px 40px var(--primary-black);
+    top: 0px;
+    left: -1000px;
+    width: 70%;
+    height: 100dvh;
+    padding: 20px;
+    transition: left 0.3s;
+  }
+
+  .nav-container nav.show {
+    overflow-x: auto;
+    left: 0;
+  }
+
+  .nav-container nav h2 {
+    display: block;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .nav-container nav h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-red);
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  .nav-container nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .nav-container nav ul li a {
+    font-size: 1.3rem;
+  }
+
+  /* ================ Hero ================*/
+  #home {
+    padding: 80px 10% 30px 10%;
+    gap: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+    line-height: 3.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .hero-content a {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+  }
+
+  /* ================ Roadmap ================*/
+  .roadmap-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #roadmap h2 {
+    font-size: 2rem;
+  }
+
+  /* ================ materi ================*/
+  #materi h2 {
+    font-size: 2rem;
+  }
+
+  /* ================ exercise ================*/
+  #exercise h2 {
+    font-size: 2rem;
+  }
+
+  /* ================ exercise ================*/
+  .exercise-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ================ about ================*/
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .about-logo img {
+    margin-bottom: 20px;
+  }
+
+  /* ================ contact ================*/
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .info-item {
+    justify-content: center;
+  }
+
+  /* ================ footer ================*/
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* ============================================ */
+  /* ========style css for hirakana.html========= */
+  /* ============================================ */
+
+  /* ================ hiragana ================*/
+  #hiragana {
+    margin: 0 5px;
+    padding: 100px 0 50px;
+  }
+
+  #katakana {
+    margin: 0 5px;
+    padding: 50px 0 0;
+    border-top: 3px solid var(--primary-black);
+  }
+
+  .all-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ================ Hero ================*/
+  #home {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 10% 30px 10%;
+    gap: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  .hero-content a {
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+
+  /* ================ Roadmap ================*/
+  .roadmap-container {
+    grid-template-columns: 1fr; /* kolom di HP */
+  }
+
+  /* ================ exercise ================*/
+  .exercise-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* ================ contact ================*/
+  #contact {
+    padding: 50px 0;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-container {
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .info-item {
+    justify-content: start;
+    gap: 10px;
+    font-size: 1.1rem;
+  }
+
+  .info-item .icon {
+    font-size: 1.3rem;
+  }
+
+  /* ============================================ */
+  /* ========style css for hirakana.html========= */
+  /* ============================================ */
+
+  /* ========== NOTIFIKASI ========== */
+  .notif-container {
+    width: 90%;
+  }
+  .notif-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .notif-container p {
+    font-size: 1rem;
+  }
+
+  /* ================ hiragana ================*/
+  #hiragana {
+    padding: 80px 0;
+  }
+
+  .all-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .all-container .card-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .all-container .card-container i {
+    font-size: 1.5rem;
+  }
+
+  /* Container utama untuk card */
+  .hiragana-cards,
+  .katakana-cards {
+    grid-template-columns: repeat(5, 55px);
+    gap: 10px;
+    padding: 0;
+  }
+
+  .hiragana-cards-youon,
+  .katakana-cards-youon {
+    grid-template-columns: repeat(3, 90px);
+    gap: 8px;
+  }
+
+  .hiragana-cards-youon .card,
+  .katakana-cards-youon .card {
+    margin: 0 auto;
+  }
+
+  /* Card */
+  .hiragana-cards .card,
+  .hiragana-cards-youon .card,
+  .katakana-cards .card,
+  .katakana-cards-youon .card {
+    width: 60px;
+    height: 80px;
+    box-shadow: 0 2px 4px var(--primary-black);
+  }
+
+  /* Hiragana di atas */
+  .hiragana-cards .card .hiragana,
+  .hiragana-cards-youon .card .hiragana,
+  .katakana-cards .card .katakana,
+  .katakana-cards-youon .card .katakana {
+    font-size: 25px;
+  }
+
+  /* Arti di bawah */
+  .hiragana-cards .card .meaning,
+  .hiragana-cards-youon .card .meaning,
+  .katakana-cards .card .meaning,
+  .katakana-cards-youon .card .meaning {
+    font-size: 15px;
+    background-color: var(--primary-black);
+    width: 100%;
+  }
+
+  /* =================================== */
+  /* sectio practice */
+  /* =================================== */
+  #practice-intro {
+    padding: 60px 20px;
+  }
+
+  #practice-intro .motivation-box h2 {
+    font-size: 1.8rem;
+  }
+
+  #practice-intro .motivation-box p {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  #practice-intro a {
+    padding: 14px 20px;
+    width: 20px;
+    font-size: 1rem;
+  }
+}
