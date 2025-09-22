@@ -712,6 +712,7 @@ section {
   );
   text-align: center;
   display: block;
+  z-index: 100;
 }
 
 .notif-container.show-notif {
