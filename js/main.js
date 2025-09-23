@@ -59,14 +59,26 @@ const closeBigCard = cardBig.querySelector('.close-btn');
 const soundBtn = document.querySelector('.sound-btn'); // pastikan tombol ada di HTML
 
 let currentText = ''; // simpan teks yang sedang ditampilkan
-
+let speedRate = '1';
 // tombol suara hanya dipasang sekali
 soundBtn.addEventListener('click', () => {
   if (!currentText) return;
 
   const utterance = new SpeechSynthesisUtterance(currentText);
   utterance.lang = 'ja-JP';
+  utterance.rate = speedRate; // kecepatan bicara (0.1 - 10)
   window.speechSynthesis.speak(utterance);
+});
+
+// kontrol kecepatan bicara
+const speedButtons = document.querySelectorAll('.speed-btn');
+
+speedButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const rate = parseFloat(btn.getAttribute('data-rate'));
+    speedRate = rate;
+    console.log(rate);
+  });
 });
 
 // fungsi untuk tampilkan zoom card
@@ -88,7 +100,6 @@ function showZoomCard(hiragana, meaning) {
   cardBig.insertBefore(zoomCardMeaning, cardBig.firstChild.nextSibling);
 
   zoomSection.classList.add('show');
-
   // simpan teks untuk tombol suara
   currentText = hiragana;
 }
@@ -96,19 +107,26 @@ function showZoomCard(hiragana, meaning) {
 // klik card
 hiraganaCards.forEach((container) => {
   container.addEventListener('click', (e) => {
+    document.documentElement.style.overflow = 'hidden';
+
     const card = e.target.closest('.card');
     if (!card) return;
 
     const hiraganaEl = card.querySelector('.char');
     const meaningEl = card.querySelector('.meaning');
-    if (!hiraganaEl || !meaningEl) return;
 
+    if (!hiraganaEl || !meaningEl) return; // jika elemen tidak ada
+    if (!hiraganaEl.textContent.trim() || !meaningEl.textContent.trim()) {
+      document.documentElement.style.overflow = '';
+      return;
+    } // jika kosong content nya
     showZoomCard(hiraganaEl.textContent, meaningEl.textContent);
   });
 });
 
 // tombol close
 closeBigCard.addEventListener('click', () => {
+  document.documentElement.style.overflow = '';
   zoomSection.classList.remove('show');
   cardBig.querySelectorAll('h1, p').forEach((el) => el.remove());
   currentText = ''; // reset teks saat ditutup
