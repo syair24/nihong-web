@@ -12,9 +12,12 @@
   </head>
   <body>
     <!-- notif -->
-    <div class="notif-container" id="notif">
-      <h1>✨ Semangat ✨</h1>
-      <p>Klik kartu untuk melihat lebih dekat</p>
+    <div class="notif" id="notif">
+      <div class="container-content">
+        <h2>✨ Semangat ✨</h2>
+        <p>Klik kartu untuk melihat lebih dekat</p>
+        <button><i class="ph ph-x"></i></button>
+      </div>
     </div>
 
     <!-- =========================== -->
@@ -48,6 +51,34 @@
     <!-- hiragana -->
     <!-- =========================== -->
     <section id="hiragana">
+      <div class="note">
+        <h2>Penjelasan Hiragana & Katakana</h2>
+        <h3>1. Gojuuon</h3>
+        <p>
+          Gojuuon terdiri dari 46 karakter. Cara mudah menghafalnya, Anda bisa mengambil setiap
+          baris menjadi: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat quia
+          magnam quasi autem dolor temporibus voluptatibus, magni at nesciunt, eius harum. Officia
+          molestiae praesentium accusantium error ipsum eum eos!
+          Numquam.<em>a-ka-sa-ta-na-ha-ma-ya-ra-wa-n</em>.
+        </p>
+
+        <h3>2. Dakuon & Handakuon</h3>
+        <p>
+          Dakuon bermakna bunyi/suara keruh. Ciri-ciri dokuon memiliki tanda seperti kutip dua
+          <b>(")</b> pada karakternya sedangkan Handakuon bermakna bunyi/suara setengah keruh.
+          Handakuon hanya berdiri dari satu baris, yaitu yang ditandai dengan tanda bulat kecil
+          <b>(⚬)</b> di karakternya.
+        </p>
+
+        <h3>3. Youon</h3>
+        <p>
+          Youon bermakna bunyi/suara yang mengalami perubahan menyimpang. Youon sebenarnya adalah
+          gabungan antara huruf hiragana kolom
+          <em>"i" (ki, shi, chi, ni, hi, mi, ri, gi, ji, bi, pi)</em> dengan huruf hiragana baris
+          <em>"ya-yu-yo"</em> yang di tulis kecil. misalnya <em>pi + ya</em> dibaca pya.
+        </p>
+      </div>
+
       <!-- title -->
       <div class="title-hiragana">
         <h2>Hiragana</h2>
@@ -64,7 +95,11 @@
 
         <!-- card dokuon -->
         <div class="card-container">
-          <h3><i class="ph ph-arrow-fat-down"></i>Dokuon<i class="ph ph-arrow-fat-down"></i></h3>
+          <h3>
+            <i class="ph ph-arrow-fat-down"></i>Dokuon & Handakuon<i
+              class="ph ph-arrow-fat-down"
+            ></i>
+          </h3>
 
           <div class="hiragana-cards" id="hiragana-dakuon">
             <!-- Card akan di-loop JS -->
@@ -135,6 +170,17 @@
             <!-- Card akan di-loop JS -->
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- =========================== -->
+    <!-- Section zoom -->
+    <!-- =========================== -->
+    <section id="zoom-section">
+      <div class="card-big">
+        <!-- di sini oii -->
+        <span class="close-btn"><i class="ph ph-x"></i></span>
+        <span class="sound-btn"><i class="ph ph-speaker-high"></i></span>
       </div>
     </section>
 

@@ -252,15 +252,23 @@
   /* ============================================ */
 
   /* ========== NOTIFIKASI ========== */
-  .notif-container {
-    width: 90%;
+  .notif {
+    position: fixed;
+    padding: 5px 10px;
   }
-  .notif-container h1 {
+
+  .notif .container-content button {
+    top: 2px;
+    right: 2px;
     font-size: 1.5rem;
   }
 
-  .notif-container p {
-    font-size: 1rem;
+  .notif .container-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .notif .container-content p {
+    font-size: 0.9rem;
   }
 
   /* ================ hiragana ================*/

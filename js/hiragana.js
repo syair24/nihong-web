@@ -181,7 +181,7 @@ function renderCards(data, containerId) {
     const card = document.createElement('div');
     card.classList.add('card');
     card.innerHTML = `
-      <div class="hiragana">${item.char}</div>
+      <div class="hiragana char">${item.char}</div>
       <div class="meaning">${item.meaning}</div>
     `;
     container.appendChild(card);

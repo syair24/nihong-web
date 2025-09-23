@@ -174,7 +174,7 @@ function renderCards(data, containerId) {
     const card = document.createElement('div');
     card.classList.add('card');
     card.innerHTML = `
-      <div class="katakana">${item.char}</div>
+      <div class="katakana char">${item.char}</div>
       <div class="meaning">${item.meaning}</div>
     `;
     container.appendChild(card);
